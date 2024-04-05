@@ -1,5 +1,9 @@
 // ignore_for_file: prefer_const_constructors
 
+import 'package:atm/views/cliente.dart';
+import 'package:atm/views/contato.dart';
+import 'package:atm/views/empresa.dart';
+import 'package:atm/views/servico.dart';
 import 'package:flutter/material.dart';
 
 class HomeAtm extends StatefulWidget{
@@ -10,6 +14,27 @@ class HomeAtm extends StatefulWidget{
 }
 
 class _HomeAtmState extends State<HomeAtm>{
+
+  void abrirServico(){
+    Navigator.push(
+      context, MaterialPageRoute(builder: (context)=>Servico()));
+  }
+
+  void abrirEmpresa(){
+    Navigator.push(context, MaterialPageRoute(builder: (context)=>Empresa()));
+  }
+
+  void abrirContato(){
+    Navigator.push(context, MaterialPageRoute(builder: (context)=>Contate()));
+  }
+
+   void abrirCliente(){
+    Navigator.push(
+      context, MaterialPageRoute(builder: (context)=>Cliente()));
+  }
+
+  
+
   @override
   Widget build(BuildContext context){
     return Scaffold(
@@ -30,11 +55,11 @@ class _HomeAtmState extends State<HomeAtm>{
 
           Row(mainAxisAlignment: MainAxisAlignment.center ,
             children: [
-            GestureDetector(child: Image.asset("imagens/menu_servico.png"),),
+            GestureDetector(child: Image.asset("imagens/menu_servico.png"),onTap:abrirServico,),
                SizedBox(
             width: 32.5,
           ),
-            GestureDetector(child: Image.asset("imagens/menu_empresa.png"),),
+            GestureDetector(child: Image.asset("imagens/menu_empresa.png"),onTap:abrirEmpresa),
             
           ],),
 
@@ -44,13 +69,13 @@ class _HomeAtmState extends State<HomeAtm>{
 
           Row(mainAxisAlignment:MainAxisAlignment.center,
             children: [
-            GestureDetector(child: Image.asset("imagens/menu_contato.png"),),
+            GestureDetector(child: Image.asset("imagens/menu_contato.png"),onTap:abrirContato,),
 
              SizedBox(
                         width: 32.5,
                       ),
 
-            GestureDetector(child: Image.asset("imagens/menu_cliente.png"),),
+            GestureDetector(child: Image.asset("imagens/menu_cliente.png"),onTap: abrirCliente,),
             
           ],)
 
