@@ -12,6 +12,9 @@ class _ServicoState extends State<Servico> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(title: Text("Servico"),),
+       
+      body: Column(children: [Row(children: [Image.asset("Imagens/detalhe_servico.png"), 
+      Text("Nossos Serviços")],)],),
     );
   }
 }

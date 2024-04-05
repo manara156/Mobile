@@ -12,6 +12,8 @@ class _EmpresaState extends State<Empresa> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(title: Text("Empresa"),),
+      body: Column(children: [Row(children: [Image.asset("Imagens/detalhe_empresa.png"), 
+      Text("Sobre nós")],)],),
     );
   }
 }

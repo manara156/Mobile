@@ -12,6 +12,10 @@ class _ContateState extends State<Contate> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(title: Text("Contate"),),
+      
+      body: Column(children: [Row(children: [Image.asset("Imagens/detalhe_contato.png"), 
+      Text("Entre em contato")],)],),
+    
     );
   }
 }
