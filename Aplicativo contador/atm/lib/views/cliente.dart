@@ -14,7 +14,16 @@ class _ClienteState extends State<Cliente> {
         appBar: AppBar(title: Text("Contate"),),
          
       body: Column(children: [Row(children: [Image.asset("Imagens/detalhe_cliente.png"), 
-      Text("Clientes")],)],),
+      Text("Clientes")],),
+            Padding(padding: EdgeInsets.only(top: 16),
+            child: Image.asset("imagens/cliente1.png"),
+            ),
+             Padding(padding: EdgeInsets.only(top: 16),
+            child: Image.asset("imagens/cliente2.png"),
+            ),
+            
+            Text("Tudo corno.")
+      ],),
     );
   }
 }
